@@ -12,7 +12,7 @@ json_file_name = current_path + "/data/cities.json"
 begin
   data = File.read(json_file_name)
 rescue Errno::ENOENT
-  abort "FILE NOR FOUNDED"
+  abort "FILE NOT FOUNDED"
 end
 
 cities_hash = JSON.parse(data)
